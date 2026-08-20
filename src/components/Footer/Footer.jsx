@@ -1,0 +1,79 @@
+import { Link } from "react-router-dom"
+import { Phone, MapPin, Clock } from "lucide-react"
+import { siteConfig } from "../../config/siteConfig"
+import { getGenericWhatsAppUrl } from "../../utils/whatsapp"
+import { InstagramIcon, FacebookIcon } from "../ui/SocialIcons"
+
+export default function Footer() {
+  return (
+    <footer id="ubicacion" className="border-t border-line bg-surface-deep text-ink">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <div>
+          <span className="font-display text-xl font-semibold tracking-tight">{siteConfig.shortName}</span>
+          <p className="mt-3 max-w-xs text-sm text-ink/60">{siteConfig.tagline}</p>
+          <div className="mt-5 flex gap-3">
+            {siteConfig.social.instagram && (
+              <a
+                href={siteConfig.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex h-9 w-9 items-center justify-center border border-ink/20 transition-colors hover:border-accent hover:text-accent"
+              >
+                <InstagramIcon size={16} />
+              </a>
+            )}
+            {siteConfig.social.facebook && (
+              <a
+                href={siteConfig.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="flex h-9 w-9 items-center justify-center border border-ink/20 transition-colors hover:border-accent hover:text-accent"
+              >
+                <FacebookIcon size={16} />
+              </a>
+            )}
+          </div>
+        </div>
+
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-wider text-ink/40">Navegación</p>
+          <nav className="mt-4 flex flex-col gap-2.5 text-sm text-ink/75">
+            <Link to="/" className="hover:text-accent">Inicio</Link>
+            <Link to="/vehiculos" className="hover:text-accent">Vehículos</Link>
+            <Link to="/ubicacion" className="hover:text-accent">Ubicación</Link>
+          </nav>
+        </div>
+
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-wider text-ink/40">Contacto</p>
+          <div className="mt-4 flex flex-col gap-3 text-sm text-ink/75">
+            <a href={getGenericWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:text-accent">
+              <Phone size={15} className="mt-0.5 shrink-0" /> {siteConfig.phone}
+            </a>
+            <p className="flex items-start gap-2">
+              <MapPin size={15} className="mt-0.5 shrink-0" /> {siteConfig.address}
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-wider text-ink/40">Horarios</p>
+          <div className="mt-4 flex flex-col gap-2 text-sm text-ink/75">
+            {siteConfig.schedule.map((s) => (
+              <p key={s.day} className="flex items-start gap-2">
+                <Clock size={15} className="mt-0.5 shrink-0" />
+                <span>{s.day}: {s.hours}</span>
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-ink/10 px-4 py-5 text-center font-mono text-[11px] uppercase tracking-wider text-ink/40 sm:px-6 lg:px-8">
+        © {new Date().getFullYear()} {siteConfig.name} — Todos los derechos reservados
+      </div>
+    </footer>
+  )
+}
