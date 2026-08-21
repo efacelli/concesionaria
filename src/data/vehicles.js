@@ -29,6 +29,7 @@ export const vehicles = [
     transmission: "Automática",
     engine: "2.0",
     traction: "Delantera",
+    type: "Auto",
     description:
       "Toyota Corolla XEI con service oficial al día. Único dueño, papeles en regla, listo para transferir. Interior impecable, sin detalles de choque ni pintura.",
     features: ["Aire acondicionado", "Control de estabilidad", "Cámara de retroceso", "Bluetooth", "Llantas de aleación", "Airbags frontales y laterales"],
@@ -54,6 +55,7 @@ export const vehicles = [
     transmission: "Automática",
     engine: "3.0 V6",
     traction: "4x4",
+    type: "Camioneta",
     description:
       "Amarok V6 Highline 4x4, la más buscada del segmento. Cadena de distribución cambiada, cubiertas nuevas. Ideal para trabajo y ruta.",
     features: ["4x4 permanente", "Asientos de cuero", "Techo eléctrico", "Barra antivuelco", "Enganche", "Control de descenso"],
@@ -79,6 +81,7 @@ export const vehicles = [
     transmission: "Manual",
     engine: "1.6",
     traction: "Delantera",
+    type: "Auto",
     description: "Focus SE con motor 1.6 confiable y bajo consumo. Excelente para uso diario en ciudad.",
     features: ["Aire acondicionado", "Dirección asistida", "Vidrios eléctricos", "Cierre centralizado"],
     images: [
@@ -102,6 +105,7 @@ export const vehicles = [
     transmission: "Automática",
     engine: "1.0 Turbo",
     traction: "Delantera",
+    type: "Auto",
     description: "Onix Premier turbo, prácticamente 0km. Garantía de fábrica vigente, service oficial.",
     features: ["MyLink táctil 8''", "Control crucero", "Sensores de estacionamiento", "Llave inteligente"],
     images: [
@@ -125,6 +129,7 @@ export const vehicles = [
     transmission: "Manual",
     engine: "1.6",
     traction: "Delantera",
+    type: "Auto",
     description: "208 Allure con mantenimiento al día. Cubiertas al 80%, service reciente.",
     features: ["Pantalla táctil", "Aire acondicionado", "Espejos eléctricos", "Computadora de a bordo"],
     images: [
@@ -148,6 +153,7 @@ export const vehicles = [
     transmission: "Manual",
     engine: "2.8",
     traction: "4x4",
+    type: "Camioneta",
     description: "Hilux SRV 4x4, la pickup más elegida del país. Estado impecable, nunca usada fuera de ruta.",
     features: ["4x4", "Control de tracción", "Cámara 360", "Llantas 18''", "Barra de caja"],
     images: [
@@ -171,6 +177,7 @@ export const vehicles = [
     transmission: "Manual",
     engine: "1.3",
     traction: "Delantera",
+    type: "Auto",
     description: "Cronos con GNC de 5ta generación instalado en fábrica. Ideal para uso intensivo, bajo costo por km.",
     features: ["GNC 5ta generación", "Aire acondicionado", "Multimedia con Carplay", "Sensores de estacionamiento"],
     images: [
@@ -195,6 +202,7 @@ export const vehicles = [
     transmission: "Automática (CVT)",
     engine: "2.0",
     traction: "Delantera",
+    type: "Auto",
     description: "Civic EXL full, techo corredizo, asientos de cuero. Muy cuidado, service en concesionario oficial.",
     features: ["Techo corredizo", "Asientos de cuero", "Levas al volante", "Cámara de retroceso"],
     images: [
@@ -218,6 +226,7 @@ export const vehicles = [
     transmission: "Manual",
     engine: "1.6",
     traction: "Delantera",
+    type: "Camioneta",
     description: "Kangoo utilitaria en excelente estado mecánico. Ideal para comercio o trabajo diario.",
     features: ["Aire acondicionado", "Puerta lateral corrediza", "Radio Bluetooth"],
     images: [wm("Renault Kangoo I front 20090121.jpg")],
@@ -238,6 +247,7 @@ export const vehicles = [
     transmission: "Automática",
     engine: "2.4",
     traction: "4x2",
+    type: "Auto",
     description: "Compass Longitude con equipamiento completo. Service oficial Jeep, cubiertas nuevas.",
     features: ["Pantalla Uconnect 8.4''", "Control crucero adaptativo", "Techo panorámico", "Encendido por botón"],
     images: [wm("2014 Jeep Compass (MK MY14) Sport wagon (2015-07-24).jpg")],
@@ -258,6 +268,7 @@ export const vehicles = [
     transmission: "Manual",
     engine: "1.6",
     traction: "Delantera",
+    type: "Auto",
     description: "Gol Trend confiable y económico, ideal primer auto. Correa de distribución cambiada recientemente.",
     features: ["Aire acondicionado", "Dirección asistida", "Alarma"],
     images: [wm("Volkswagen Gol 1.6 Trendline 2014 (14089216972).jpg")],
@@ -278,6 +289,7 @@ export const vehicles = [
     transmission: "Automática (CVT)",
     engine: "1.6",
     traction: "Delantera",
+    type: "Auto",
     description: "Kicks Exclusive full equipo, techo bicolor. Como nueva, garantía de fábrica vigente.",
     features: ["Cámara 360", "Techo bicolor", "Climatizador automático", "Freno de mano electrónico"],
     images: [wm("2025 Nissan Kicks SV AWD in Deep Blue Pearl, front right, 2024-10-06.jpg")],
@@ -298,6 +310,7 @@ export const vehicles = [
     transmission: "Manual",
     engine: "2.2",
     traction: "4x4",
+    type: "Camioneta",
     description: "Ranger XLT 4x4 en muy buen estado general. Ideal trabajo y aventura, caja con lona marítima.",
     features: ["4x4", "Lona marítima", "Barra antivuelco", "Control de estabilidad"],
     images: [

@@ -15,7 +15,7 @@ export default function WhatsAppButton({
   }
   const variants = {
     solid: "bg-[#25D366] text-white hover:bg-[#1FB859]",
-    outline: "border border-current text-ink hover:bg-ink hover:text-navy-900",
+    outline: "border border-current text-ink hover:bg-ink hover:text-bg",
     light: "bg-white text-navy-900 hover:bg-white/90",
   }
 

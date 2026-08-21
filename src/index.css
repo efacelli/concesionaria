@@ -2,19 +2,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* Color tokens — tema oscuro AUTOLISTO: navy profundo + amarillo de acento */
-  --color-bg: #0E2340;
-  --color-surface: #16324F;
-  --color-surface-deep: #081422;
-  --color-ink: #F2F5FA;
-  --color-ink-soft: #AEBEDA;
-  --color-ink-faint: #7C90AC;
-  --color-line: #2A4A70;
-  --color-accent: #F2B705;
-  --color-accent-dark: #C6970A;
-  --color-accent-soft: #3A2C0E;
+  /* Color tokens — tema claro AUTOLISTO: blanco y beige como colores
+     principales (con un beige más oscuro para diferenciar secciones),
+     azul reservado para detalles puntuales (botones, links, íconos).
+     El amarillo queda solo para la sección de grúas 24hs. */
+  --color-bg: #FBF7EE;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #EBE0C6;
+  --color-ink: #26241F;
+  --color-ink-soft: #5C5648;
+  --color-ink-faint: #948C79;
+  --color-line: #E4DCC9;
+  --color-accent: #1D5FA6;
+  --color-accent-dark: #154A85;
+  --color-accent-soft: #DCEAF8;
+  --color-alert: #F2B705;
+  --color-alert-dark: #C6970A;
   --color-navy-900: #0E2340;
-  --color-danger: #B5442F;
+  --color-danger: #A6402F;
   --color-success: #3F6B4E;
 
   --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;

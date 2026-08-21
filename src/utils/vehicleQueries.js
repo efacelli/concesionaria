@@ -40,6 +40,10 @@ export function isNewArrival(vehicle) {
   return days <= 14
 }
 
+export function getDistinctTypes() {
+  return [...new Set(getAvailableVehicles().map((v) => v.type))].sort()
+}
+
 export function getDistinctBrands() {
   return [...new Set(getAvailableVehicles().map((v) => v.brand))].sort()
 }

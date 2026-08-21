@@ -8,19 +8,19 @@ const reasons = [
 
 export default function WhyUsSection() {
   return (
-    <section id="por-que-elegirnos" className="bg-surface-deep">
+    <section id="por-que-elegirnos" className="bg-surface-alt">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="font-mono text-[11px] uppercase tracking-wider text-ink/60">Nosotros</p>
+        <p className="font-mono text-[11px] uppercase tracking-wider text-accent-dark">Nosotros</p>
         <h2 className="mt-1 font-display text-2xl font-medium text-ink sm:text-3xl">Por qué elegirnos</h2>
 
         <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3">
           {reasons.map(({ icon: Icon, title, text }) => (
             <div key={title} className="flex flex-col items-center gap-4 text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-ink/20 text-accent">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent-soft text-accent-dark">
                 <Icon size={28} strokeWidth={1.75} />
               </div>
               <h3 className="font-display text-2xl font-medium text-ink">{title}</h3>
-              <p className="max-w-xs text-sm leading-relaxed text-ink/70">{text}</p>
+              <p className="max-w-xs text-sm leading-relaxed text-ink-soft">{text}</p>
             </div>
           ))}
         </div>

@@ -5,6 +5,7 @@ import { siteConfig } from "../config/siteConfig"
 
 export const defaultFilters = {
   search: "",
+  type: "",
   brand: "",
   model: "",
   year: "",
@@ -59,6 +60,7 @@ export function useVehicleFilters(vehicles) {
           `${v.brand} ${v.model}`.toLowerCase().includes(q)
       )
     }
+    if (filters.type) list = list.filter((v) => v.type === filters.type)
     if (filters.brand) list = list.filter((v) => v.brand === filters.brand)
     if (filters.model.trim())
       list = list.filter((v) => v.model.toLowerCase().includes(filters.model.trim().toLowerCase()))

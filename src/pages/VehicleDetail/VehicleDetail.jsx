@@ -85,6 +85,7 @@ export default function VehicleDetail() {
 
             <div className="mt-5 grid grid-cols-2 gap-3">
               {[
+                ["Tipo", vehicle.type],
                 ["Kilometraje", formatMileage(vehicle.mileage)],
                 ["Color", vehicle.color],
                 ["Combustible", vehicle.fuel],

@@ -10,21 +10,28 @@ export const siteConfig = {
   tagline: "Vehículos seleccionados, atención personalizada",
 
   // Contacto
-  whatsapp: "5493854723051", // +54 9 3854 72-3051, formato internacional sin '+' ni espacios
-  phone: "+54 9 3854 72-3051",
+  whatsapp: "5493854723036", // +54 9 3854 72-3036, formato internacional sin '+' ni espacios
+  phone: "3854 72-3036 / 3854 72-3051",
   email: "contacto@autolisto.com.ar",
 
   // Ubicación
-  address: "Necochea y Los Andes, La Banda, Santiago del Estero, Argentina",
+  address: "Necochea y Pasaje Andes, La Banda, Santiago del Estero, Argentina",
   schedule: [
-    { day: "Lunes a Viernes", hours: "9:00 – 19:00" },
+    { day: "Lunes a Viernes", hours: "8:30 – 12:30 y 17:00 – 21:00 " },
     { day: "Sábados", hours: "9:00 – 13:00" },
     { day: "Domingos", hours: "Cerrado" },
   ],
   googleMapsEmbedUrl:
-    "https://www.google.com/maps?q=Necochea+y+Los+Andes,+La+Banda,+Santiago+del+Estero,+Argentina&output=embed",
+    "https://www.google.com/maps?q=Necochea+y+Pasaje+Andes,+La+Banda,+Santiago+del+Estero,+Argentina&output=embed",
   googleMapsDirectionsUrl:
-    "https://maps.google.com/?q=Necochea+y+Los+Andes,+La+Banda,+Santiago+del+Estero,+Argentina",
+    "https://maps.google.com/?q=Necochea+y+Pasaje+Andes,+La+Banda,+Santiago+del+Estero,+Argentina",
+
+  // Servicio de grúas 24 hs — número de contacto directo para emergencias
+  towService: {
+    enabled: true,
+    phoneDisplay: "3854 72-3036",
+    phoneTel: "+543854723036",
+  },
 
   // Redes sociales — dejar en "" para ocultar el ícono correspondiente
   social: {

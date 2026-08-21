@@ -1,7 +1,8 @@
 const variants = {
-  accent: "bg-accent text-navy-900",
-  soft: "bg-accent-soft text-accent",
-  dark: "bg-ink text-navy-900",
+  accent: "bg-accent text-white",
+  soft: "bg-accent-soft text-accent-dark",
+  dark: "bg-ink text-bg",
+  alert: "bg-alert text-navy-900",
   success: "bg-success text-white",
   danger: "bg-danger text-white",
   outline: "border border-line text-ink-soft",

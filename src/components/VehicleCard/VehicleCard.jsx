@@ -29,7 +29,9 @@ export default function VehicleCard({ vehicle }) {
 
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">{vehicle.brand}</p>
+          <p className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">
+            {vehicle.brand} · {vehicle.type}
+          </p>
           <h3 className="font-display text-lg font-medium leading-tight text-ink">
             {vehicle.model} <span className="text-ink-soft">· {vehicle.year}</span>
           </h3>
@@ -48,7 +50,7 @@ export default function VehicleCard({ vehicle }) {
 
         <div className="mt-auto flex items-end justify-between gap-2 pt-1">
           <Price value={vehicle.price} className="font-display text-xl font-medium text-ink" />
-          <span className="inline-flex items-center gap-1 text-sm font-medium text-ink transition-transform group-hover:translate-x-0.5">
+          <span className="inline-flex items-center gap-1 text-sm font-medium text-accent-dark transition-transform group-hover:translate-x-0.5">
             Ver vehículo <ArrowRight size={15} />
           </span>
         </div>

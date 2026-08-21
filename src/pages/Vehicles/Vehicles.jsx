@@ -8,6 +8,7 @@ import {
   getDistinctColors,
   getDistinctFuels,
   getDistinctTransmissions,
+  getDistinctTypes,
 } from "../../utils/vehicleQueries"
 import VehicleGrid from "../../components/VehicleGrid/VehicleGrid"
 import VehicleFilters from "../../components/VehicleFilters/VehicleFilters"
@@ -17,6 +18,7 @@ const allVehicles = getAvailableVehicles()
 const years = [...new Set(allVehicles.map((v) => String(v.year)))].sort((a, b) => b - a)
 
 const facets = {
+  types: getDistinctTypes(),
   brands: getDistinctBrands(),
   years,
   colors: getDistinctColors(),
@@ -36,7 +38,7 @@ export default function Vehicles() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="mb-8">
-        <p className="font-mono text-[11px] uppercase tracking-wider text-ink-soft">Catálogo</p>
+        <p className="font-mono text-[11px] uppercase tracking-wider text-accent-dark">Catálogo</p>
         <h1 className="mt-1 font-display text-3xl font-medium text-ink">Vehículos disponibles</h1>
       </div>
 
@@ -61,7 +63,7 @@ export default function Vehicles() {
                 <SlidersHorizontal size={15} />
                 Filtros
                 {activeFilterCount > 0 && (
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent text-[11px] text-navy-900">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent text-[11px] text-white">
                     {activeFilterCount}
                   </span>
                 )}

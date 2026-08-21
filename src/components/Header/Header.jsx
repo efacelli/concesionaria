@@ -38,7 +38,7 @@ export default function Header() {
               end={item.end}
               className={({ isActive }) =>
                 `font-mono text-[13px] uppercase tracking-wider transition-colors ${
-                  isActive ? "text-ink border-b-2 border-accent" : "text-ink-soft hover:text-ink"
+                  isActive ? "text-accent-dark border-b-2 border-accent" : "text-ink-soft hover:text-ink"
                 }`
               }
             >
@@ -78,7 +78,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `border-b border-line/70 py-3.5 font-mono text-sm uppercase tracking-wider last:border-0 ${
-                    isActive ? "text-ink font-semibold" : "text-ink-soft"
+                    isActive ? "text-accent-dark font-semibold" : "text-ink-soft"
                   }`
                 }
               >

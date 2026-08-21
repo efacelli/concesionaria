@@ -13,7 +13,7 @@ export default function VehicleFilters({ filters, setFilter, clearFilters, activ
           {activeFilterCount > 0 && (
             <button
               onClick={clearFilters}
-              className="bg-accent px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-900 transition-colors hover:bg-accent-dark"
+              className="bg-accent px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-white transition-colors hover:bg-accent-dark"
             >
               Limpiar filtros
             </button>
@@ -40,6 +40,7 @@ export default function VehicleFilters({ filters, setFilter, clearFilters, activ
         </div>
       </label>
 
+      <SelectField label="Tipo" value={filters.type} onChange={(v) => setFilter("type", v)} options={facets.types} />
       <SelectField label="Marca" value={filters.brand} onChange={(v) => setFilter("brand", v)} options={facets.brands} />
       <SelectField label="Año" value={filters.year} onChange={(v) => setFilter("year", v)} options={facets.years} />
 
