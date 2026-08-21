@@ -17,7 +17,7 @@ export const siteConfig = {
   // Ubicación
   address: "Necochea y Pasaje Andes, La Banda, Santiago del Estero, Argentina",
   schedule: [
-    { day: "Lunes a Viernes", hours: "8:30 – 12:30 y 17:00 – 21:00 " },
+    { day: "Lunes a Viernes", hours: "8:30 – 12:30 y 17:00 – 21:00 (horario de verano)" },
     { day: "Sábados", hours: "9:00 – 13:00" },
     { day: "Domingos", hours: "Cerrado" },
   ],

@@ -6,13 +6,13 @@
      principales (con un beige más oscuro para diferenciar secciones),
      azul reservado para detalles puntuales (botones, links, íconos).
      El amarillo queda solo para la sección de grúas 24hs. */
-  --color-bg: #FBF7EE;
+  --color-bg: #F2E7CC;
   --color-surface: #FFFFFF;
-  --color-surface-alt: #EBE0C6;
+  --color-surface-alt: #E4D3A4;
   --color-ink: #26241F;
   --color-ink-soft: #5C5648;
   --color-ink-faint: #948C79;
-  --color-line: #E4DCC9;
+  --color-line: #DCC99A;
   --color-accent: #1D5FA6;
   --color-accent-dark: #154A85;
   --color-accent-soft: #DCEAF8;

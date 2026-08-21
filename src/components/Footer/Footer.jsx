@@ -3,13 +3,14 @@ import { Phone, MapPin, Clock } from "lucide-react"
 import { siteConfig } from "../../config/siteConfig"
 import { getGenericWhatsAppUrl } from "../../utils/whatsapp"
 import { InstagramIcon, FacebookIcon } from "../ui/SocialIcons"
+import logo from "../../assets/logo-autolisto.png"
 
 export default function Footer() {
   return (
     <footer id="ubicacion" className="border-t border-line bg-surface-alt text-ink">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
-          <span className="font-display text-xl font-semibold tracking-tight">{siteConfig.shortName}</span>
+          <img src={logo} alt={siteConfig.name} className="h-12 w-auto" />
           <p className="mt-3 max-w-xs text-sm text-ink-soft">{siteConfig.tagline}</p>
           <div className="mt-5 flex gap-3">
             {siteConfig.social.instagram && (

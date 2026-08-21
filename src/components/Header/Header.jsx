@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react"
 import WhatsAppIcon from "../ui/WhatsAppIcon"
 import { siteConfig } from "../../config/siteConfig"
 import { getGenericWhatsAppUrl } from "../../utils/whatsapp"
+import logo from "../../assets/logo-autolisto.png"
 
 const navItems = [
   { to: "/", label: "Inicio", end: true },
@@ -25,9 +26,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-surface/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="font-display text-xl font-semibold tracking-tight text-ink">
-            {siteConfig.shortName}
-          </span>
+          <img src={logo} alt={siteConfig.name} className="h-10 w-auto sm:h-11" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -52,7 +51,7 @@ export default function Header() {
             href={getGenericWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-success px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#345a41]"
+            className="inline-flex items-center gap-2 bg-[#25D366] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#1FB859]"
           >
             <WhatsAppIcon size={18} /> WhatsApp
           </a>
@@ -89,7 +88,7 @@ export default function Header() {
               href={getGenericWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center justify-center gap-2 bg-success px-4 py-3 text-sm font-medium text-white"
+              className="mt-4 inline-flex items-center justify-center gap-2 bg-[#25D366] px-4 py-3 text-sm font-medium text-white"
             >
               <WhatsAppIcon size={18} /> Consultar por WhatsApp
             </a>
