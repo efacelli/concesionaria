@@ -4,9 +4,9 @@ import { siteConfig } from "../../config/siteConfig"
 import { getGenericWhatsAppUrl } from "../../utils/whatsapp"
 import ImageWithFallback from "../../components/ui/ImageWithFallback"
 
-const heroImage = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(
-  "Used car dealership in Santiago, Chile.jpg"
-)}?width=1200`
+// Foto del hero: va en public/portada.jpg. Para cambiarla alcanza con
+// reemplazar ese archivo (mismo nombre) — no hace falta tocar código.
+const heroImage = "/portada.webp"
 
 export default function Hero() {
   return (

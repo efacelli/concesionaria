@@ -4,16 +4,14 @@
 // este archivo por llamadas a la API manteniendo la misma forma de datos
 // (ver src/utils/vehicleQueries.js, que es la única capa que consume esto).
 //
-// Las fotos son de Wikimedia Commons (dominio público / Creative Commons),
-// elegidas por marca y modelo real como referencia visual. Reemplazarlas
-// por fotos propias del lote de AUTOLISTO antes de publicar: son de la
-// versión/año más parecidos disponibles, no necesariamente el mismo color
-// o el mismo mercado que el auto real en el lote.
+// FOTOS: cada vehículo apunta a /vehiculos/<slug>/1.jpg, /2.jpg, etc.
+// Esos archivos van en la carpeta public/vehiculos/<slug>/ del proyecto
+// (NO acá en src). Para cambiar las fotos de un auto alcanza con crear
+// esa carpeta y poner ahí las imágenes con esos nombres exactos — no
+// hace falta tocar este archivo ni el código para nada. Si falta una
+// foto, la web ya muestra un cartel de "Sin imagen" en su lugar en vez
+// de romperse.
 // ============================================================================
-
-// Sirve una imagen real de Wikimedia Commons a partir del nombre de archivo.
-const wm = (filename, width = 1200) =>
-  `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(filename)}?width=${width}`
 
 export const vehicles = [
   {
@@ -34,9 +32,9 @@ export const vehicles = [
       "Toyota Corolla XEI con service oficial al día. Único dueño, papeles en regla, listo para transferir. Interior impecable, sin detalles de choque ni pintura.",
     features: ["Aire acondicionado", "Control de estabilidad", "Cámara de retroceso", "Bluetooth", "Llantas de aleación", "Airbags frontales y laterales"],
     images: [
-      wm("Toyota Corolla 2.0 XEi 2022.jpg"),
-      wm("2019-2022 Toyota Corolla G-X 1.8 3BA-ZRE212 (20220911).jpg"),
-      wm("Toyota Corolla E150 sedan Sanming 01 2022-11-26.jpg"),
+      "/vehiculos/toyota-corolla-2022/1.jpg",
+      "/vehiculos/toyota-corolla-2022/2.jpg",
+      "/vehiculos/toyota-corolla-2022/3.jpg",
     ],
     status: "available",
     isFeatured: true,
@@ -60,9 +58,9 @@ export const vehicles = [
       "Amarok V6 Highline 4x4, la más buscada del segmento. Cadena de distribución cambiada, cubiertas nuevas. Ideal para trabajo y ruta.",
     features: ["4x4 permanente", "Asientos de cuero", "Techo eléctrico", "Barra antivuelco", "Enganche", "Control de descenso"],
     images: [
-      wm("2019 Volkswagen Amarok Highline V6 TDi 4MOTION 3.0 Front.jpg"),
-      wm("2019 Volkswagen Amarok Highline V6 TDi 4MOTION 3.0 Rear.jpg"),
-      wm("Volkswagen Amarok II V6 1X7A7384.jpg"),
+      "/vehiculos/vw-amarok-2021/1.jpg",
+      "/vehiculos/vw-amarok-2021/2.jpg",
+      "/vehiculos/vw-amarok-2021/3.jpg",
     ],
     status: "available",
     isFeatured: true,
@@ -85,8 +83,8 @@ export const vehicles = [
     description: "Focus SE con motor 1.6 confiable y bajo consumo. Excelente para uso diario en ciudad.",
     features: ["Aire acondicionado", "Dirección asistida", "Vidrios eléctricos", "Cierre centralizado"],
     images: [
-      wm("Ford Focus IV sedan ST Line 03 China 2019-03-25.jpg"),
-      wm("2016 Ford Focus Titanium Sedan in Blue Candy, Front Left, 03-05-2023.jpg"),
+      "/vehiculos/ford-focus-2019/1.jpg",
+      "/vehiculos/ford-focus-2019/2.jpg",
     ],
     status: "available",
     isFeatured: false,
@@ -109,8 +107,8 @@ export const vehicles = [
     description: "Onix Premier turbo, prácticamente 0km. Garantía de fábrica vigente, service oficial.",
     features: ["MyLink táctil 8''", "Control crucero", "Sensores de estacionamiento", "Llave inteligente"],
     images: [
-      wm("Chevrolet Onix Turbo Premier 2023 (53298952614).jpg"),
-      wm("Chevrolet Onix Turbo Premier Sedan 2022 (52771725520).jpg"),
+      "/vehiculos/chevrolet-onix-2023/1.jpg",
+      "/vehiculos/chevrolet-onix-2023/2.jpg",
     ],
     status: "available",
     isFeatured: true,
@@ -133,8 +131,8 @@ export const vehicles = [
     description: "208 Allure con mantenimiento al día. Cubiertas al 80%, service reciente.",
     features: ["Pantalla táctil", "Aire acondicionado", "Espejos eléctricos", "Computadora de a bordo"],
     images: [
-      wm("2020 Peugeot 208 Allure.jpg"),
-      wm("2021 Peugeot 208 1.2 PureTech 100 Allure (Front).jpg"),
+      "/vehiculos/peugeot-208-2020/1.jpg",
+      "/vehiculos/peugeot-208-2020/2.jpg",
     ],
     status: "available",
     isFeatured: false,
@@ -157,8 +155,8 @@ export const vehicles = [
     description: "Hilux SRV 4x4, la pickup más elegida del país. Estado impecable, nunca usada fuera de ruta.",
     features: ["4x4", "Control de tracción", "Cámara 360", "Llantas 18''", "Barra de caja"],
     images: [
-      wm("Toyota Hilux SRV 3.0 Crew Cab 2013.jpg"),
-      wm("Toyota Hilux SRV 3.0 Crew Cab 2013 (11863955236).jpg"),
+      "/vehiculos/toyota-hilux-2020/1.jpg",
+      "/vehiculos/toyota-hilux-2020/2.jpg",
     ],
     status: "available",
     isFeatured: true,
@@ -181,9 +179,9 @@ export const vehicles = [
     description: "Cronos con GNC de 5ta generación instalado en fábrica. Ideal para uso intensivo, bajo costo por km.",
     features: ["GNC 5ta generación", "Aire acondicionado", "Multimedia con Carplay", "Sensores de estacionamiento"],
     images: [
-      wm("2022 Fiat Cronos 1.3 Drive GSE (front view).jpg"),
-      wm("2022 Fiat Cronos 1.3 Drive GSE (rear view).jpg"),
-      wm("2022 Fiat Cronos 1.3 Drive GSE (side view).jpg"),
+      "/vehiculos/fiat-cronos-2022/1.jpg",
+      "/vehiculos/fiat-cronos-2022/2.jpg",
+      "/vehiculos/fiat-cronos-2022/3.jpg",
     ],
     status: "available",
     isFeatured: false,
@@ -206,8 +204,8 @@ export const vehicles = [
     description: "Civic EXL full, techo corredizo, asientos de cuero. Muy cuidado, service en concesionario oficial.",
     features: ["Techo corredizo", "Asientos de cuero", "Levas al volante", "Cámara de retroceso"],
     images: [
-      wm("Honda Civic (2021) sedan Sport DSC 7057.jpg"),
-      wm("Honda Civic (2021) sedan Sport DSC 7054.jpg"),
+      "/vehiculos/honda-civic-2018/1.jpg",
+      "/vehiculos/honda-civic-2018/2.jpg",
     ],
     status: "sold",
     isFeatured: false,
@@ -229,7 +227,9 @@ export const vehicles = [
     type: "Camioneta",
     description: "Kangoo utilitaria en excelente estado mecánico. Ideal para comercio o trabajo diario.",
     features: ["Aire acondicionado", "Puerta lateral corrediza", "Radio Bluetooth"],
-    images: [wm("Renault Kangoo I front 20090121.jpg")],
+    images: [
+      "/vehiculos/renault-kangoo-2019/1.jpg",
+    ],
     status: "available",
     isFeatured: false,
     createdAt: "2026-06-01",
@@ -250,7 +250,9 @@ export const vehicles = [
     type: "Auto",
     description: "Compass Longitude con equipamiento completo. Service oficial Jeep, cubiertas nuevas.",
     features: ["Pantalla Uconnect 8.4''", "Control crucero adaptativo", "Techo panorámico", "Encendido por botón"],
-    images: [wm("2014 Jeep Compass (MK MY14) Sport wagon (2015-07-24).jpg")],
+    images: [
+      "/vehiculos/jeep-compass-2021/1.jpg",
+    ],
     status: "available",
     isFeatured: true,
     createdAt: "2026-08-05",
@@ -271,7 +273,9 @@ export const vehicles = [
     type: "Auto",
     description: "Gol Trend confiable y económico, ideal primer auto. Correa de distribución cambiada recientemente.",
     features: ["Aire acondicionado", "Dirección asistida", "Alarma"],
-    images: [wm("Volkswagen Gol 1.6 Trendline 2014 (14089216972).jpg")],
+    images: [
+      "/vehiculos/vw-gol-2017/1.jpg",
+    ],
     status: "available",
     isFeatured: false,
     createdAt: "2026-03-22",
@@ -292,7 +296,9 @@ export const vehicles = [
     type: "Auto",
     description: "Kicks Exclusive full equipo, techo bicolor. Como nueva, garantía de fábrica vigente.",
     features: ["Cámara 360", "Techo bicolor", "Climatizador automático", "Freno de mano electrónico"],
-    images: [wm("2025 Nissan Kicks SV AWD in Deep Blue Pearl, front right, 2024-10-06.jpg")],
+    images: [
+      "/vehiculos/nissan-kicks-2022/1.jpg",
+    ],
     status: "available",
     isFeatured: true,
     createdAt: "2026-08-17",
@@ -314,8 +320,8 @@ export const vehicles = [
     description: "Ranger XLT 4x4 en muy buen estado general. Ideal trabajo y aventura, caja con lona marítima.",
     features: ["4x4", "Lona marítima", "Barra antivuelco", "Control de estabilidad"],
     images: [
-      wm("2013 Ford Ranger (PX) XLT 4WD 4-door utility (2015-07-09) 01.jpg"),
-      wm("2013 Ford Ranger (PX) XLT 4WD 4-door utility (2015-07-09) 02.jpg"),
+      "/vehiculos/ford-ranger-2020/1.jpg",
+      "/vehiculos/ford-ranger-2020/2.jpg",
     ],
     status: "sold",
     isFeatured: false,

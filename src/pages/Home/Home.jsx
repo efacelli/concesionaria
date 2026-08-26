@@ -3,6 +3,7 @@ import { siteConfig } from "../../config/siteConfig"
 import { getFeaturedVehicles, getLatestVehicles } from "../../utils/vehicleQueries"
 import Hero from "./Hero"
 import TowServiceBanner from "../../components/TowServiceBanner/TowServiceBanner"
+import BatteriesBanner from "../../components/BatteriesBanner/BatteriesBanner"
 import FeaturedSection from "./FeaturedSection"
 import LatestArrivalsSection from "./LatestArrivalsSection"
 import WhyUsSection from "./WhyUsSection"
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <TowServiceBanner />
       <FeaturedSection vehicles={featured} />
+      <BatteriesBanner />
       <LatestArrivalsSection vehicles={latest} />
       <WhyUsSection />
       <section className="bg-surface">
