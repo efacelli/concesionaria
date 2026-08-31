@@ -6,7 +6,7 @@ import ImageWithFallback from "../../components/ui/ImageWithFallback"
 
 // Foto del hero: va en public/portada.jpg. Para cambiarla alcanza con
 // reemplazar ese archivo (mismo nombre) — no hace falta tocar código.
-const heroImage = "/portada.webp"
+const heroImage = "/portada.jpg"
 
 export default function Hero() {
   return (
