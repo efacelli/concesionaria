@@ -19,13 +19,7 @@ export default function Location() {
       {/* Foto horizontal a todo el ancho de la pantalla. Va en public/local.jpg
           (o el nombre que se use); una foto horizontal del frente/local
           queda perfecta acá — se recorta automáticamente a esta franja. */}
-      <div className="mt-8 w-full">
-        <ImageWithFallback
-          src="/local.jpg"
-          alt={`Frente de ${siteConfig.name}`}
-          className="aspect-[21/9] w-full sm:aspect-[3/1]"
-        />
-      </div>
+     
 
       <div className="mx-auto max-w-7xl px-4 pb-12 pt-10 sm:px-6 lg:px-8">
         <LocationInfo />
