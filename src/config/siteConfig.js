@@ -17,7 +17,7 @@ export const siteConfig = {
   // Ubicación
   address: "Necochea y Pasaje Andes, La Banda, Santiago del Estero, Argentina",
   schedule: [
-    { day: "Lunes a Viernes", hours: "8:30 – 12:30 y 17:00 – 21:00" },
+    { day: "Lunes a Viernes", hours: "8:30 – 12:30 y 17:00 – 21:00 (horario de verano)" },
     { day: "Sábados", hours: "9:00 – 13:00" },
     { day: "Domingos", hours: "Cerrado" },
   ],
@@ -35,8 +35,8 @@ export const siteConfig = {
 
   // Redes sociales — dejar en "" para ocultar el ícono correspondiente
   social: {
-    instagram: "https://www.instagram.com/autolistoautomotores/",
-    facebook: "https://www.facebook.com/p/Autolisto-Automotores-100057438549869/",
+    instagram: "https://instagram.com/autolisto",
+    facebook: "https://facebook.com/autolisto",
   },
 
   // --------------------------------------------------------------------

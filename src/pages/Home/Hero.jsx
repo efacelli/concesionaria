@@ -4,15 +4,18 @@ import { siteConfig } from "../../config/siteConfig"
 import { getGenericWhatsAppUrl } from "../../utils/whatsapp"
 import ImageWithFallback from "../../components/ui/ImageWithFallback"
 
-// Foto del hero: va en public/portada.jpg. Para cambiarla alcanza con
+// Foto del hero: va en public/portada.webp. Para cambiarla alcanza con
 // reemplazar ese archivo (mismo nombre) — no hace falta tocar código.
+// En mobile ocupa todo el ancho de la pantalla; en desktop llega hasta
+// el borde derecho de la pantalla (no queda encerrada dentro del margen
+// del resto del contenido).
 const heroImage = "/portada.webp"
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-line bg-surface">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:py-0 lg:px-8">
-        <div className="order-2 lg:order-1">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center">
+        <div className="order-2 px-4 py-14 sm:px-6 lg:order-1 lg:py-16 lg:pl-[max(1rem,calc((100vw-80rem)/2+2rem))] lg:pr-10">
           <p className="spec-plate inline-block border border-line px-3 py-1 text-[11px] uppercase tracking-wider text-ink-soft">
             {siteConfig.address.split(",")[1]?.trim() || "Santiago del Estero"} · Concesionaria
           </p>
@@ -47,7 +50,7 @@ export default function Hero() {
         </div>
 
         <div className="order-1 lg:order-2">
-          <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[520px]">
+          <div className="relative aspect-[4/3] w-full lg:aspect-auto lg:h-[560px]">
             <ImageWithFallback
               src={heroImage}
               alt="Vehículos disponibles en el lote"
