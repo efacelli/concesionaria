@@ -475,6 +475,135 @@ export const vehicles = [
     isFeatured: false,
     createdAt: "2026-04-30",
   },
+
+    {
+    id: 18,
+    slug: "citroen-c4-lounge-thp-2017-blanca",
+    brand: "Citroën",
+    model: "C4 Lounge THP",
+    year: 2017,
+    price: 0,
+    mileage: 0, // COMPLETAR
+    color: "Blanco",
+    fuel: "Nafta",
+    transmission: "Automática", // CONFIRMAR
+    engine: "1.6 THP 165 CV",
+    traction: "Delantera",
+    type: "Auto",
+    description: "Citroën C4 Lounge THP 2017 color blanco. Sedán con motor turbo 1.6 THP de 165 CV. Consultá por WhatsApp para verlo en AUTOLISTO.",
+    features: ["Motor 1.6 THP turbo de 165 CV"],
+    images: [
+      "/vehiculos/citroen-c4-lounge-thp-2017-blanca.jpeg",
+      "/vehiculos/citroen-c4-lounge-thp-2017-blanca-2.jpeg",
+      "/vehiculos/citroen-c4-lounge-thp-2017-blanca-3.jpeg",
+    ],
+    status: "available",
+    isFeatured: false,
+    createdAt: "2026-11-19",
+  },
+  {
+    id: 19,
+    slug: "chevrolet-montana-ls-2021-blanca",
+    brand: "Chevrolet",
+    model: "Montana LS",
+    year: 2021,
+    price: 0,
+    mileage: 0, // COMPLETAR
+    color: "Blanco",
+    fuel: "Nafta",
+    transmission: "Manual",
+    engine: "1.8 105 CV",
+    traction: "Delantera",
+    type: "Camioneta",
+    description: "Chevrolet Montana LS 2021 color blanco. Pick-up compacta con motor 1.8 y caja manual. Consultá por WhatsApp para verla en AUTOLISTO.",
+    features: ["Aire acondicionado", "Motor 1.8 de 105 CV", "Caja manual de 5 velocidades", "Alarma de luces encendidas"],
+    images: [
+      "/vehiculos/chevrolet-montana-ls-2021-blanca.jpeg",
+      "/vehiculos/chevrolet-montana-ls-2021-blanca-2.jpeg",
+      "/vehiculos/chevrolet-montana-ls-2021-blanca-3.jpeg",
+      "/vehiculos/chevrolet-montana-ls-2021-blanca-4.jpeg",
+    ],
+    status: "available",
+    isFeatured: false,
+    createdAt: "2026-11-19",
+  },
+  {
+    id: 20,
+    slug: "fiat-toro-freedom-4x2-2016-blanca",
+    brand: "Fiat",
+    model: "Toro Freedom 4x2",
+    year: 2016,
+    price: 0,
+    mileage: 0, // COMPLETAR
+    color: "Blanco",
+    fuel: "Diésel", // CONFIRMAR
+    transmission: "Manual", // CONFIRMAR
+    engine: "2.0 Multijet",
+    traction: "4x2",
+    type: "Camioneta",
+    description: "Fiat Toro Freedom 4x2 2016 color blanca. Consultá por WhatsApp para verla en AUTOLISTO.",
+    features: ["Control de estabilidad", "Anclajes Isofix", "Cinturones de 3 puntos en las 5 plazas", "Faros antiniebla", "Barras de techo"],
+    images: [
+      "/vehiculos/fiat-toro-freedom-4x2-2016-blanca.jpeg",
+      "/vehiculos/fiat-toro-freedom-4x2-2016-blanca-2.jpeg",
+      "/vehiculos/fiat-toro-freedom-4x2-2016-blanca-3.jpeg",
+      "/vehiculos/fiat-toro-freedom-4x2-2016-blanca-4.jpeg",
+    ],
+    status: "available",
+    isFeatured: false,
+    createdAt: "2026-11-19",
+  },
+  {
+    id: 21,
+    slug: "chevrolet-onix-joy-2017-blanco",
+    brand: "Chevrolet",
+    model: "Onix Joy",
+    year: 2017,
+    price: 0,
+    mileage: 0, // COMPLETAR
+    color: "Blanco",
+    fuel: "Nafta",
+    transmission: "Manual", // CONFIRMAR
+    engine: "1.4",
+    traction: "Delantera",
+    type: "Auto",
+    description: "Chevrolet Onix Joy 2017 color blanco, hatchback de 5 puertas. Consultá por WhatsApp para verlo en AUTOLISTO.",
+    features: ["5 puertas", "Motor 1.4"], // AGREGAR lo que tenga (aire, dirección, etc.)
+    images: [
+      "/vehiculos/chevrolet-onix-joy-2017-blanco.jpeg",
+      "/vehiculos/chevrolet-onix-joy-2017-blanco-2.jpeg",
+      "/vehiculos/chevrolet-onix-joy-2017-blanco-3.jpeg",
+      "/vehiculos/chevrolet-onix-joy-2017-blanco-4.jpeg",
+    ],
+    status: "available",
+    isFeatured: false,
+    createdAt: "2026-11-19",
+  },
+  {
+    id: 22,
+    slug: "fiat-palio-5p-2017-blanco",
+    brand: "Fiat",
+    model: "Palio 5 puertas",
+    year: 2017,
+    price: 0,
+    mileage: 0, // COMPLETAR
+    color: "Blanco",
+    fuel: "Nafta",
+    transmission: "Manual", // CONFIRMAR
+    engine: "1.4", // CONFIRMAR
+    traction: "Delantera",
+    type: "Auto",
+    description: "Fiat Palio 5 puertas 2017 color blanco. Consultá por WhatsApp para verlo en AUTOLISTO.",
+    features: ["5 puertas", "Llantas de aleación", "Faros antiniebla"],
+    images: [
+      "/vehiculos/fiat-palio-5p-2017-blanco.jpeg",
+      "/vehiculos/fiat-palio-5p-2017-blanco-2.jpeg",
+      "/vehiculos/fiat-palio-5p-2017-blanco-3.jpeg",
+    ],
+    status: "available",
+    isFeatured: false,
+    createdAt: "2026-11-19",
+  },
 ]
 
 export default vehicles
