@@ -14,13 +14,15 @@ export default function VehicleCard({ vehicle }) {
       to={`/vehiculos/${vehicle.slug}`}
       className="group flex flex-col overflow-hidden border border-line bg-surface transition-shadow hover:shadow-[0_8px_30px_-12px_rgba(20,23,28,0.25)]"
     >
-      <div className="relative aspect-[4/3]">
-        <ImageWithFallback
-          src={vehicle.images[0]}
-          alt={vehicleTitle(vehicle)}
-          className="h-full w-full"
-          imgClassName="transition-transform duration-500 group-hover:scale-[1.04]"
-        />
+      <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="absolute inset-0">
+          <ImageWithFallback
+            src={vehicle.images[0]}
+            alt={vehicleTitle(vehicle)}
+            className="h-full w-full"
+            imgClassName="transition-transform duration-500 group-hover:scale-[1.04]"
+          />
+        </div>
         <div className="absolute left-3 top-3 flex flex-wrap gap-2">
           {isNewArrival(vehicle) && !isSold && <Badge variant="accent">Nuevo ingreso</Badge>}
           {isSold && <Badge variant="dark">Vendido</Badge>}
