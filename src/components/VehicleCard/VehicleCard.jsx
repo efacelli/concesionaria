@@ -3,7 +3,7 @@ import { Gauge, Fuel, ArrowRight } from "lucide-react"
 import ImageWithFallback from "../ui/ImageWithFallback"
 import Badge from "../ui/Badge"
 import Price from "../ui/Price"
-import { formatMileage, vehicleTitle } from "../../utils/format"
+import { formatMileage, formatYear, vehicleTitle } from "../../utils/format"
 import { isNewArrival } from "../../utils/vehicleQueries"
 
 export default function VehicleCard({ vehicle }) {
@@ -33,7 +33,7 @@ export default function VehicleCard({ vehicle }) {
             {vehicle.brand} · {vehicle.type}
           </p>
           <h3 className="font-display text-lg font-medium leading-tight text-ink">
-            {vehicle.model} <span className="text-ink-soft">· {vehicle.year}</span>
+            {vehicle.model} <span className="text-ink-soft">· {formatYear(vehicle)}</span>
           </h3>
         </div>
 

@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom"
 import { ChevronRight, CheckCircle2 } from "lucide-react"
 import { useDocumentTitle } from "../../hooks/useDocumentTitle"
 import { getVehicleBySlug, getRelatedVehicles } from "../../utils/vehicleQueries"
-import { formatMileage, vehicleTitle } from "../../utils/format"
+import { formatMileage, formatYear, vehicleTitle } from "../../utils/format"
 import { getVehicleWhatsAppUrl } from "../../utils/whatsapp"
 import VehicleGallery from "../../components/VehicleGallery/VehicleGallery"
 import Price from "../../components/ui/Price"
@@ -78,7 +78,7 @@ export default function VehicleDetail() {
             {isSold && <Badge variant="dark" className="mb-3">Vendido</Badge>}
             <p className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">{vehicle.brand}</p>
             <h1 className="font-display text-2xl font-semibold leading-tight text-ink">
-              {vehicle.model} <span className="text-ink-soft">· {vehicle.year}</span>
+              {vehicle.model} <span className="text-ink-soft">· {formatYear(vehicle)}</span>
             </h1>
 
             <Price value={vehicle.price} className="mt-3 block font-display text-3xl font-medium text-ink" />

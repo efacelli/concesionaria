@@ -22,5 +22,10 @@ export function formatDate(isoDate) {
 
 // Título legible de un vehículo, reutilizado en cards, detalle y WhatsApp.
 export function vehicleTitle(vehicle) {
-  return `${vehicle.brand} ${vehicle.model} ${vehicle.year}`
+  return `${vehicle.brand} ${vehicle.model} ${formatYear(vehicle)}`
+}
+
+// Los modelos del año en curso (2026) se muestran directamente como "0km".
+export function formatYear(vehicle) {
+  return vehicle.year >= 2026 ? "0km" : String(vehicle.year)
 }
