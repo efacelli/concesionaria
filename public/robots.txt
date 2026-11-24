@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://autolistoautomotores.com.ar/sitemap.xml

@@ -3,7 +3,7 @@ import { Car } from "lucide-react"
 
 // Imagen con estado de carga y fallback visual si la URL falla —
 // evitar que se rompa el layout cuando falte una foto real del cliente.
-export default function ImageWithFallback({ src, alt, className = "", imgClassName = "" }) {
+export default function ImageWithFallback({ src, alt, className = "", imgClassName = "", priority = false }) {
   const [status, setStatus] = useState("loading")
 
   return (
@@ -12,7 +12,9 @@ export default function ImageWithFallback({ src, alt, className = "", imgClassNa
         <img
           src={src}
           alt={alt}
-          loading="lazy"
+          loading={priority ? "eager" : "lazy"}
+          fetchPriority={priority ? "high" : undefined}
+          decoding="async"
           onLoad={() => setStatus("loaded")}
           onError={() => setStatus("error")}
           className={`h-full w-full object-cover transition-opacity duration-300 ${

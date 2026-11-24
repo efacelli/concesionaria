@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
+import { useDocumentTitle } from "../hooks/useDocumentTitle"
 
 export default function NotFound() {
+  useDocumentTitle("Página no encontrada", undefined, { noindex: true })
   return (
     <div className="mx-auto flex min-h-[60vh] max-w-xl flex-col items-center justify-center gap-4 px-4 text-center">
       <p className="spec-plate text-6xl font-semibold text-ink-faint">404</p>

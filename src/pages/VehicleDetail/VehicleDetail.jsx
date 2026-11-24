@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { Link, useParams, useNavigate } from "react-router-dom"
 import { ChevronRight, CheckCircle2 } from "lucide-react"
+import { siteConfig } from "../../config/siteConfig"
 import { useDocumentTitle } from "../../hooks/useDocumentTitle"
 import { getVehicleBySlug, getRelatedVehicles } from "../../utils/vehicleQueries"
 import { formatMileage, formatYear, vehicleTitle } from "../../utils/format"
@@ -23,8 +24,38 @@ export default function VehicleDetail() {
   }, [vehicle])
 
   useDocumentTitle(
-    vehicle ? vehicleTitle(vehicle) : "Vehículo no encontrado",
-    vehicle ? `${vehicleTitle(vehicle)} — ${formatMileage(vehicle.mileage)}, ${vehicle.fuel}, ${vehicle.transmission}.` : undefined
+    vehicle ? `${vehicleTitle(vehicle)} en venta en La Banda` : "Vehículo no encontrado",
+    vehicle
+      ? `${vehicleTitle(vehicle)} — ${formatMileage(vehicle.mileage)}, ${vehicle.fuel}, ${vehicle.transmission}, ${vehicle.traction}. Disponible en AUTOLISTO Automotores, La Banda, Santiago del Estero. Consultá por WhatsApp.`
+      : undefined,
+    vehicle
+      ? {
+          image: vehicle.images?.[0],
+          type: "product",
+          jsonLd: {
+            "@context": "https://schema.org",
+            "@type": "Car",
+            name: vehicleTitle(vehicle),
+            brand: { "@type": "Brand", name: vehicle.brand },
+            model: vehicle.model,
+            vehicleModelDate: String(vehicle.year),
+            color: vehicle.color,
+            fuelType: vehicle.fuel,
+            vehicleTransmission: vehicle.transmission,
+            mileageFromOdometer: { "@type": "QuantitativeValue", value: vehicle.mileage, unitCode: "KMT" },
+            description: vehicle.description,
+            image: (vehicle.images || []).map((i) => siteConfig.url + i),
+            url: `${siteConfig.url}/vehiculos/${vehicle.slug}`,
+            itemCondition: vehicle.mileage === 0 ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
+            offers: {
+              "@type": "Offer",
+              availability: vehicle.status === "sold" ? "https://schema.org/SoldOut" : "https://schema.org/InStock",
+              seller: { "@type": "AutoDealer", name: siteConfig.name },
+              url: `${siteConfig.url}/vehiculos/${vehicle.slug}`,
+            },
+          },
+        }
+      : { noindex: true }
   )
 
   if (!vehicle) {

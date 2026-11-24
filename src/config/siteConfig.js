@@ -7,12 +7,19 @@
 export const siteConfig = {
   name: "AUTOLISTO Automotores",
   shortName: "AUTOLISTO",
+  // URL pública del sitio (sin barra final). CAMBIAR por el dominio real cuando
+  // exista (ej: "https://www.autolisto.com.ar"). La usan canonical, sitemap,
+  // Open Graph y datos estructurados.
+  url: "https://autolistoautomotores.com.ar",
+  locality: "La Banda",
+  region: "Santiago del Estero",
+  ogImage: "/local.jpg",
   tagline: "Vehículos seleccionados, atención personalizada",
 
   // Contacto
   whatsapp: "5493854723036", // +54 9 3854 72-3036, formato internacional sin '+' ni espacios
   phone: "3854 72-3036 / 3854 72-3051",
-  email: "contacto@autolisto.com.ar",
+  email: "autopista_automotores@hotmail.com",
 
   // Ubicación
   address: "Necochea y Pasaje Andes, La Banda, Santiago del Estero, Argentina",
@@ -35,8 +42,8 @@ export const siteConfig = {
 
   // Redes sociales — dejar en "" para ocultar el ícono correspondiente
   social: {
-    instagram: "https://instagram.com/autolisto",
-    facebook: "https://facebook.com/autolisto",
+    instagram: "https://www.instagram.com/autolistoautomotores/",
+    facebook: "https://www.facebook.com/p/Autolisto-Automotores-100057559115150/",
   },
 
   // --------------------------------------------------------------------

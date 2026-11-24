@@ -27,7 +27,10 @@ const facets = {
 }
 
 export default function Vehicles() {
-  useDocumentTitle("Vehículos", "Catálogo completo de vehículos usados seleccionados, con filtros por marca, año, precio y más.")
+  useDocumentTitle(
+    "Autos y camionetas usados y 0km en venta",
+    "Catálogo de autos y camionetas usados y 0km en La Banda, Santiago del Estero. Filtrá por marca, año, kilometraje y tipo. Hilux, Amarok, Ranger, Nivus y más."
+  )
 
   const { filters, setFilter, clearFilters, activeFilterCount, sort, setSort, results } = useVehicleFilters(allVehicles)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)

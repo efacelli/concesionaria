@@ -10,7 +10,10 @@ import WhyUsSection from "./WhyUsSection"
 import LocationInfo from "../../components/LocationInfo/LocationInfo"
 
 export default function Home() {
-  useDocumentTitle("Inicio", `${siteConfig.name} — ${siteConfig.tagline}. Catálogo de vehículos usados seleccionados.`)
+  useDocumentTitle(
+    "Autos y camionetas en La Banda, Santiago del Estero",
+    `${siteConfig.name} en La Banda, Santiago del Estero: camionetas Hilux, Amarok, Ranger y autos usados y 0km. Catálogo actualizado, permutas y consulta por WhatsApp.`
+  )
 
   const featured = getFeaturedVehicles(6)
   const latest = getLatestVehicles(3)

@@ -4,7 +4,10 @@ import LocationInfo from "../../components/LocationInfo/LocationInfo"
 import ImageWithFallback from "../../components/ui/ImageWithFallback"
 
 export default function Location() {
-  useDocumentTitle("Ubicación", `Encontranos en ${siteConfig.address}. Horarios, teléfono y cómo llegar.`)
+  useDocumentTitle(
+    "Ubicación y horarios",
+    `Visitá AUTOLISTO Automotores en ${siteConfig.address}. Horarios de atención, teléfono, WhatsApp y cómo llegar.`
+  )
 
   return (
     <div>

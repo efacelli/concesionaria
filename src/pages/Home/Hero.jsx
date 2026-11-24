@@ -53,8 +53,9 @@ export default function Hero() {
           <div className="relative aspect-[4/3] w-full lg:aspect-auto lg:h-[560px]">
             <ImageWithFallback
               src={heroImage}
-              alt="Vehículos disponibles en el lote"
+              alt="Camionetas y autos disponibles en AUTOLISTO Automotores, La Banda"
               className="h-full w-full"
+              priority
             />
           </div>
         </div>
